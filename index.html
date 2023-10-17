@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>김은수</title>
+<style>
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+</style>
+</head>
+<body>
+
+<button id="showPopupBtn">버튼을 눌러 팝업 열기</button>
+
+<div id="popup" class="popup">
+  김은수 잘생김~!
+</div>
+
+<script>
+const showPopupBtn = document.getElementById('showPopupBtn');
+const popup = document.getElementById('popup');
+
+showPopupBtn.addEventListener('click', () => {
+  popup.style.display = 'block';
+});
+
+popup.addEventListener('click', () => {
+  popup.style.display = 'none';
+});
+</script>
+
+</body>
+</html>
