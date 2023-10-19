@@ -1,41 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>김은수</title>
-<style>
-.popup {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 20px;
-  background-color: #ffffff;
-  border: 1px solid #000000;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-}
-</style>
+    <title>Soccket Ball</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        h1 {
+            background-color: #0074cc;
+            color: white;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #0074cc;
+        }
+
+        p {
+            margin: 20px;
+        }
+
+        ul {
+            list-style-type: disc;
+        }
+
+        img {
+            max-width: 100%;
+        }
+    </style>
 </head>
 <body>
+    <h1>Soccket Ball</h1>
+    <p>Soccket Ball은 재미를 누리면서 에너지를 생성할 수 있는 특별한 축구공입니다. 이 공은 에너지를 저장하고 나중에 사용할 수 있는 내장 발전기를 갖추고 있습니다.</p>
+    
+    <h2>특징</h2>
+    <ul>
+        <li>재미있는 축구 경기를 즐기면서 동시에 에너지 생성</li>
+        <li>내장 발전기로 에너지 저장</li>
+        <li>발전된 에너지를 전등 등의 장치에 사용</li>
+    </ul>
 
-<button id="showPopupBtn">버튼</button>
+    <h2>사용 예</h2>
+    <p>Soccket Ball은 전 세계 어디에서나 사용 가능하며, 특히 전기가 부족한 지역에서 가정용 조명을 위해 사용될 수 있습니다.</p>
 
-<div id="popup" class="popup">
-  김은수 잘생김~!
-</div>
+    <h2>특징2?</h2>
+    <p>소켓 볼은 전기가 공급되지 않는 나라들에게 도움이 되는 제품이다.
+아침에 아이들이 공을 차고 놀때 공안에 있는 진동 감지 장치가 발전 장치가 들어있어 공이 충돌할 때 생기는
+운동에너지를 전기에너지를 변화시켜 저녁에는 전등으로 사용할 수 있다. 아이들이 공을 30분 정도 가지고 놀고 오면 3시간 동안
+불을 밝힐 수 있는 전력이 생성된다. 충전된 에너지를 이용하며 밤에 불을 키거나 배터리를 충전할 수 있다.</p>
 
-<script>
-const showPopupBtn = document.getElementById('showPopupBtn');
-const popup = document.getElementById('popup');
-
-showPopupBtn.addEventListener('click', () => {
-  popup.style.display = 'block';
-});
-
-popup.addEventListener('click', () => {
-  popup.style.display = 'none';
-});
-</script>
-
+    <!-- 이미지 추가 -->
+    <img src="https://cdn.imweb.me/upload/S201902255c7358c519d48/f16a1ff2502d9.png" alt="Soccket Ball 이미지">
 </body>
 </html>
