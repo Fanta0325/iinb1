@@ -3,47 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>연세탑 학원</title>
+    <title>iinb git test001</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
+        body { margin: 0; }
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-top: 56.25%;
+            box-shadow: 0 2px 8px rgba(63, 69, 81, 0.16);
+            margin: 1.6em 0;
+            overflow: hidden;
+            border-radius: 8px;
         }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border: none;
         }
-        .logo {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .logo img {
-            width: 200px;
-            height: auto;
-        }
-        h1 {
-            text-align: center;
-            color: #1e90ff;
-        }
-        p {
-            text-align: center;
-            color: #333;
-            font-size: 1.2em;
+        .fullscreen-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="logo">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSrocxJK9ICf4iHnhVkQsD38y7L0Fi31X6DEyZx1FwCQ&s" alt="Yonsei Top Academy">
-        </div>
-        <h1>쌈@뽕 깔롱진 연세탑 학원🥵🥵🥵</h1>
-        <p>대한민국에서 제일가는 영어학원이 바로 향동동의 연세탑 학원입니다!</p>
+    <div class="video-container">
+        <iframe loading="lazy" src="https://www.canva.com/design/DAGQafqd8fY/W143A7UekQpt2A894R69KQ/view?embed" allowfullscreen></iframe>
+        <button class="fullscreen-btn" onclick="toggleFullscreen()">전체 화면</button>
     </div>
+    
+    <script>
+        function toggleFullscreen() {
+            const elem = document.querySelector('.video-container');
+            if (!document.fullscreenElement) {
+                elem.requestFullscreen().catch(err => console.log(err));
+            } else {
+                document.exitFullscreen();
+            }
+        }
+    </script>
 </body>
 </html>
