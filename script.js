@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const postsContainer = document.getElementById('posts-container');
 
     postForm.addEventListener('submit', (e) => {
-        e.preventDefault();
+        e.preventDefault(); // 기본 새로고침 동작 막기
         const content = postContent.value.trim();
         if (content) {
             addPost(content);
