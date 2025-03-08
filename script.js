@@ -1,7 +1,11 @@
 // 햄버거 메뉴 토글
 function toggleMenu() {
     const menu = document.getElementById("menu");
-    menu.style.left = menu.style.left === "0px" ? "-250px" : "0px";
+    if (menu.style.left === "0px") {
+        menu.style.left = "-250px";
+    } else {
+        menu.style.left = "0px";
+    }
 }
 
 // 기능 전환
