@@ -3,64 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HDMS UTILS V3</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>HDMS Utils</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="menuToggle" class="btn btn-primary">☰ 메뉴</div>
-    <div id="menu" class="bg-dark text-white p-3">
-        <a href="#" onclick="showSection('numberPicker')" class="text-white">숫자 뽑기</a>
-        <a href="#" onclick="showSection('timer')" class="text-white">타이머</a>
-        <a href="#" onclick="showSection('stopwatch')" class="text-white">스톱워치</a>
-        <a href="#" onclick="showSection('calculator')" class="text-white">계산기</a>
+    <header>
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+        <h1>HDMS UTILS V3</h1>
+        <p>다양한 수학 수업 도구를 제공합니다.</p>
+    </header>
+    <div id="menu" class="menu">
+        <a href="#" onclick="showSection('numberPicker')">숫자 뽑기</a>
+        <a href="#" onclick="showSection('timer')">타이머</a>
+        <a href="#" onclick="showSection('stopwatch')">스톱워치</a>
+        <a href="#" onclick="showSection('calculator')">계산기</a>
     </div>
-    <div class="content container mt-5">
+    <div class="content container">
         <section id="numberPicker" style="display:none;">
             <h2>숫자 뽑기</h2>
-            <label>범위 지정: <input type="number" id="numMin" class="form-control" placeholder="최소값"> ~ <input type="number" id="numMax" class="form-control" placeholder="최대값"></label>
-            <button onclick="pickNumber()" class="btn btn-primary">뽑기</button>
+            <label>범위 지정: <input type="number" id="numMin" placeholder="최소값"> ~ <input type="number" id="numMax" placeholder="최대값"></label>
+            <button onclick="pickNumber()">뽑기</button>
             <p id="pickedNumber"></p>
         </section>
         <section id="timer" style="display:none;">
             <h2>타이머</h2>
-            <label>시간 설정: <input type="number" id="timerMinutes" class="form-control" placeholder="분"> 분 <input type="number" id="timerSeconds" class="form-control" placeholder="초"> 초</label>
-            <button onclick="startTimer()" class="btn btn-primary">시작</button>
+            <label>시간 설정: <input type="number" id="timerMinutes" placeholder="분"> 분 <input type="number" id="timerSeconds" placeholder="초"> 초</label>
+            <button onclick="startTimer()">시작</button>
             <p id="timerDisplay"></p>
         </section>
         <section id="stopwatch" style="display:none;">
             <h2>스톱워치</h2>
-            <button onclick="startStopwatch()" class="btn btn-primary">시작</button>
-            <button onclick="stopStopwatch()" class="btn btn-secondary">중지</button>
-            <button onclick="resetStopwatch()" class="btn btn-danger">리셋</button>
+            <button onclick="startStopwatch()">시작</button>
+            <button onclick="stopStopwatch()">중지</button>
+            <button onclick="resetStopwatch()">리셋</button>
             <p id="stopwatchDisplay"></p>
         </section>
         <section id="calculator" style="display:none;">
             <h2>계산기</h2>
-            <input type="text" id="calcDisplay" class="form-control mb-3" readonly>
+            <input type="text" id="calcDisplay" readonly>
             <div class="btn-group">
-                <button onclick="appendCalc('1')" class="btn btn-light">1</button>
-                <button onclick="appendCalc('2')" class="btn btn-light">2</button>
-                <button onclick="appendCalc('3')" class="btn btn-light">3</button>
-                <button onclick="appendCalc('+')" class="btn btn-light">+</button>
+                <button onclick="appendCalc('1')">1</button>
+                <button onclick="appendCalc('2')">2</button>
+                <button onclick="appendCalc('3')">3</button>
+                <button onclick="appendCalc('+')">+</button>
             </div>
             <div class="btn-group">
-                <button onclick="appendCalc('4')" class="btn btn-light">4</button>
-                <button onclick="appendCalc('5')" class="btn btn-light">5</button>
-                <button onclick="appendCalc('6')" class="btn btn-light">6</button>
-                <button onclick="appendCalc('-')" class="btn btn-light">-</button>
+                <button onclick="appendCalc('4')">4</button>
+                <button onclick="appendCalc('5')">5</button>
+                <button onclick="appendCalc('6')">6</button>
+                <button onclick="appendCalc('-')">-</button>
             </div>
             <div class="btn-group">
-                <button onclick="appendCalc('7')" class="btn btn-light">7</button>
-                <button onclick="appendCalc('8')" class="btn btn-light">8</button>
-                <button onclick="appendCalc('9')" class="btn btn-light">9</button>
-                <button onclick="appendCalc('*')" class="btn btn-light">*</button>
+                <button onclick="appendCalc('7')">7</button>
+                <button onclick="appendCalc('8')">8</button>
+                <button onclick="appendCalc('9')">9</button>
+                <button onclick="appendCalc('*')">*</button>
             </div>
             <div class="btn-group">
-                <button onclick="appendCalc('0')" class="btn btn-light">0</button>
-                <button onclick="clearCalc()" class="btn btn-warning">C</button>
-                <button onclick="calculate()" class="btn btn-success">=</button>
-                <button onclick="appendCalc('/')" class="btn btn-light">/</button>
+                <button onclick="appendCalc('0')">0</button>
+                <button onclick="clearCalc()">C</button>
+                <button onclick="calculate()">=</button>
+                <button onclick="appendCalc('/')">/</button>
             </div>
         </section>
     </div>
